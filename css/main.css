@@ -29,17 +29,19 @@ h2 {
     font-weight: bold;
     margin-top: 0px;
 	color: rgb(240,240,240);
+	clear: both;
 }	
 
 p {
 	color: rgb(240,240,240);
+	clear: both;
 }
 
-#menu {
+#menu { 
 	margin-left: auto;
 	margin-right: auto;
-	width: 500px;
-	}
+	width: 800px;
+	} 
 
 #menu li {
 	display:inline;
