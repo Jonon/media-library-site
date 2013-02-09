@@ -1,11 +1,16 @@
 /**
  * 	General
  */
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
 body {
 	background: rgb(15,15,15);
 }
 
-a:link {
+a:link, a {
 	color: black;
 	font-family: "helvetica", "sans-serif";
 	text-decoration: none;
@@ -19,6 +24,15 @@ p {
 h2 {
 	font-family: "Arial", "Helvetica", "sans-serif";
 	font-size: 20px;
+	font-weight: bold;
+	margin-top: 0px;
+	color: rgb(240,240,240);
+	clear: both;
+}
+
+h1 {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 40px;
 	font-weight: bold;
 	margin-top: 0px;
 	color: rgb(240,240,240);
@@ -116,6 +130,7 @@ h2 {
 #container {
 	overflow: auto;
 	margin: 0 auto;
+	min-height: 300px;
 	width: 100%;
 }
 
