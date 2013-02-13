@@ -8,6 +8,12 @@ html, body {
 body {
 	background: rgb(15,15,15);
 }
+a:link {
+	color: rgb(0,154,205);
+}
+a:visited {
+	color: rgb(0,104,139); 
+}
 
 a:link, a {
 	color: black;
