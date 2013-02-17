@@ -172,13 +172,13 @@ h3 {
 	text-align: left;
 }
 
-#moviecontent  .left, #moviecontent .right, #moviecontent .rightstars {
+#moviecontent  .left, #moviecontent .right {
 	float: left;
 	padding-top: 20px;	
 }
 
-#moviecontent  .rightstars {
-	width: 350px;	
+#moviecontent  .stars {
+	padding-top: 360px;
 }
 
 #moviecontent .left {
