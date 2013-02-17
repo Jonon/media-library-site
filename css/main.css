@@ -187,6 +187,7 @@ h3 {
 
 #moviecontent .right {
 	width: 350px;
+	text-align: justify;
 }
 
 #moviecontent p {
