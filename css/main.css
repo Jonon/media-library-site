@@ -26,6 +26,15 @@ p {
 	clear: both;
 }
 
+h1 {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 40px;
+	font-weight: bold;
+	margin-top: 0px;
+	color: rgb(240,240,240);
+	clear: both;
+}
+
 h2 {
 	font-family: "Arial", "Helvetica", "sans-serif";
 	font-size: 20px;
@@ -35,10 +44,9 @@ h2 {
 	clear: both;
 }
 
-h1 {
+h3 {
 	font-family: "Arial", "Helvetica", "sans-serif";
-	font-size: 40px;
-	font-weight: bold;
+	font-size: 18px;
 	margin-top: 0px;
 	color: rgb(240,240,240);
 	clear: both;
@@ -149,3 +157,51 @@ h1 {
 	padding-top: 50px;
 	text-align: center;
 }
+#moviecontent {
+	margin-left: auto;
+    margin-right: auto;
+	width: 700px;
+}
+
+#moviecontent h2{
+	text-align: center;
+}
+
+#moviecontent h3{
+	text-align: left;
+}
+
+#moviecontent  .left, #moviecontent .right, #moviecontent .rightstars {
+	float: left;
+	padding-top: 20px;	
+}
+
+#moviecontent  .rightstars {
+	width: 350px;	
+}
+
+#moviecontent .left {
+	width: 250px;
+}
+
+#moviecontent .right {
+	width: 350px;
+}
+
+#moviecontent p {
+	clear: none;
+}
+
+#moviecontent iframe{
+	margin-left: auto;
+    margin-right: auto;
+	float: left;
+	display: block;
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+
+
+
+
+
