@@ -157,28 +157,20 @@ h3 {
 	padding-top: 50px;
 	text-align: center;
 }
+
 #moviecontent {
 	margin-left: auto;
     margin-right: auto;
 	width: 700px;
 }
 
-#moviecontent h2{
-	text-align: center;
-	padding-top: 10px;
-}
-
-#moviecontent h3{
-	text-align: left;
+#moviecontent .imgs{
+	
 }
 
 #moviecontent  .left, #moviecontent .right {
 	float: left;
 	padding-top: 20px;	
-}
-
-#moviecontent  .stars {
-	padding-top: 360px;
 }
 
 #moviecontent .left {
@@ -188,6 +180,14 @@ h3 {
 #moviecontent .right {
 	width: 350px;
 	text-align: justify;
+}
+
+#moviecontent  ul  {
+	padding-top: 10px;
+}
+
+#moviecontent  ul ul li {
+	margin-top: 5px;
 }
 
 #moviecontent p {
