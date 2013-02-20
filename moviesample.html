@@ -6,6 +6,8 @@
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon" />
+		<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+		<script src="http://vjs.zencdn.net/c/video.js"></script>
 	</head>
 	<body>
 		<div id="container">
@@ -60,8 +62,16 @@
 					<li><p>Ewan McGregor</p></li>
 					</ul>
 					</ul>
-				<iframe width="560" height="315" src="http://www.youtube.com/embed/PEo3UzUQg_Y" frameborder="0" allowfullscreen></iframe>
-				
+				<div class="video">
+				<video id="my_video_1" class="video-js vjs-default-skin" controls 
+				preload="auto" width="560" height="315" poster="img/st.jpg"
+				data-setup="{}">
+				<source src="video/starwarsIII.mp4" type="video/mp4">
+				<source src="video/starwarsIII.webm" type="video/webm">
+				<source src="video/starwarsIII (2)" type="video/webm">
+				Your browser does not support the video.
+				</video>
+				</div>
 			</div>
 			
 			

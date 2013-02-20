@@ -194,13 +194,11 @@ h3 {
 	clear: none;
 }
 
-#moviecontent iframe{
-	margin-left: auto;
-    margin-right: auto;
-	float: left;
-	display: block;
-	padding-top: 150px;
-	padding-bottom: 150px;
+#moviecontent .video{
+	margin-top: 150px;
+	margin-bottom: 150px;
+	margin-right: 136px;
+	border: solid black 2px;
 }
 
 
