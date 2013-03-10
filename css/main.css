@@ -1,33 +1,43 @@
 /**
+
  * 	General
+
  */
+
 html, body {
 	height: 100%;
 }
 
+
 body {
 	background: rgb(15,15,15);
+	font-family: "Helvetica", "sans-serif", "Arial";
 }
+
 a:link {
 	color: rgb(0,154,205);
 }
+
 a:visited {
 	color: rgb(0,104,139); 
 }
 
+
 a:link, a {
-	color: black;
-	font-family: "helvetica", "sans-serif";
+	color: rgb(0,154,205);
 	text-decoration: none;
 }
+
 
 p {
 	color: rgb(240,240,240);
 	clear: both;
+	font-family: "Helvetica", "sans-serif", "Arial";
 }
 
+
 h1 {
-	font-family: "Arial", "Helvetica", "sans-serif";
+	font-family: "Helvetica", "sans-serif", "Arial";
 	font-size: 40px;
 	font-weight: bold;
 	margin-top: 0px;
@@ -35,8 +45,9 @@ h1 {
 	clear: both;
 }
 
+
 h2 {
-	font-family: "Arial", "Helvetica", "sans-serif";
+	font-family: "Helvetica", "sans-serif", "Arial";
 	font-size: 20px;
 	font-weight: bold;
 	margin-top: 0px;
@@ -44,17 +55,22 @@ h2 {
 	clear: both;
 }
 
+
 h3 {
-	font-family: "Arial", "Helvetica", "sans-serif";
+	font-family:"Helvetica", "sans-serif", "Arial";
 	font-size: 18px;
 	margin-top: 0px;
 	color: rgb(240,240,240);
 	clear: both;
 }
 
+
 /**
+
  * 	Header
+
  */
+
 #header {
 	border-bottom: 2px solid black;
 	margin-left: auto;
@@ -63,9 +79,14 @@ h3 {
 	width: 100%;
 }
 
+
+
 /**
+
  * 	Footer
+
  */
+
 #footer {
 	border: 2px solid black;
 	clear: both;
@@ -75,19 +96,28 @@ h3 {
 	text-align: center;
 }
 
+
+
 /**
+
  * 	Navigation
+
  */
+
 #menu {
 	margin-left: auto;
 	margin-right: auto;
 	width: 608px;
 }
 
+
+
 #menu a:hover {
 	background: rgb(28,73,138);
 	color: rgb(15,15,15);
 }
+
+
 
 #menu a {
 	background: rgb(15,15,15);
@@ -98,6 +128,8 @@ h3 {
 	line-height: 2;
 }
 
+
+
 #menu ul li {
 	float: left; /* Display list items horizontally */
 	list-style: none;
@@ -105,14 +137,17 @@ h3 {
 	width: 100px;
 }
 
+
 #menu ul li .active {
 	background-color: rgb(28,73,138);
 	color: rgb(15,15,15);
 }
 
+
 #menu ul li ul {
 	display: none;
 }
+
 
 #menu ul li:hover > ul {
 	display: block;
@@ -121,25 +156,35 @@ h3 {
 	left: -1px;
 }
 
+
 #menu ul li, #menu ul li ul li {
 	border: 1px solid rgb(0, 0, 0);
 }
+
 
 #menu ul li:nth-child(1n+2) {
 	border-left: none;
 }
 
+
 #menu ul li ul li {
 	border: 1px solid rgb(0, 0, 0) !important;
 }
+
+
 
 #menu ul li ul li:nth-child(1n+2) {
 	border-top: none !important;
 }
 
+
+
 /**
+
  * 	Main container
+
  */
+
 #container {
 	overflow: auto;
 	margin: 0 auto;
@@ -147,9 +192,14 @@ h3 {
 	width: 100%;
 }
 
+
+
 /**
+
  * 	Content
+
  */
+
 #content {
 	margin-left: auto;
 	margin-right: auto;
@@ -158,50 +208,104 @@ h3 {
 	text-align: center;
 }
 
+
+
+
+
+/**
+
+ * 	moviecontent
+
+ */
+
 #moviecontent {
+	background:rgba(35,35,35,0.4);
 	margin-left: auto;
     margin-right: auto;
-	width: 700px;
+	width: 725px;
+	padding-left: 20px;
+	overflow: hidden;
 }
 
+
+
 #moviecontent .imglogo{
-	
+	padding-bottom: 10px;
+	margin-top: -32px;
 }
+
 
 #moviecontent  .left, #moviecontent .right {
 	float: left;
 	padding-top: 20px;	
 }
 
+
 #moviecontent .left {
 	width: 250px;
 }
 
+
 #moviecontent .right {
-	width: 350px;
+	width: 450px;
 	text-align: justify;
 }
+
 
 #moviecontent  ul  {
 	padding-top: 10px;
 }
 
+
 #moviecontent  ul ul li {
 	margin-top: 5px;
 }
+
 
 #moviecontent p {
 	clear: none;
 }
 
-#moviecontent .video{
-	margin-top: 150px;
-	margin-bottom: 150px;
-	margin-right: 136px;
-	border: solid black 2px;
+
+#moviecontent .video {
+	margin-top: 10px;
 }
 
+    /* javascript*/
 
+#moviecontent .gallery {
+	margin-top: 10px;
+}
+	
+	
+#moviecontent .backdrops {
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
+.backdrops img {
+background: rgb(0,0,0);
+border: 4px solid rgb(0,0,0);
+height: 50px;
+padding: 1px;
+margin: 0 10px 10px 0;
 
+}
+ 
+.backdrops img:hover {
+border: 4px solid; 
+color:rgb(0,204,255);
+cursor:pointer;
+}
+ 
+.preview img {
+background: rgb(0,0,0);
+border: 4px solid rgb(0,0,0);
+padding: 1px;
+height: 250px;
+}
 
+.backdrops {
+	margin-left: 10px;
+}
