@@ -172,3 +172,6 @@ pip-log.txt
 public_html/img/backdrops
 public_html/img/logos
 public_html/img/posters
+
+# Project specific
+DbConfig.php
