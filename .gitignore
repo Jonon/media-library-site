@@ -169,3 +169,6 @@ pip-log.txt
 .project
 
 # Other
+public_html/img/backdrops
+public_html/img/logos
+public_html/img/posters
