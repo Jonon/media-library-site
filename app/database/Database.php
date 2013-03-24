@@ -6,7 +6,7 @@ class Database
 {
     private static $instance;
     
-    public function getInstance()
+    public static function getInstance()
     {
         return isset(self::$instance) ? self::$instance : self::$instance = new Database();
     }
