@@ -26,21 +26,21 @@ class MovieService
     
     public function getAllMovies()
     {
-        $movies = $this->_movieDal->get();
-        $this->printJsonResult($movies);
+        $movieList = $this->_movieDal->get();
+        $this->printJsonResult($movieList->get());
     }
     
-    public function getMovieByImdbId($imdb_id)
+    public function getMovieById($id)
     {
-        if (isset($imdb_id)) {
-            $movie = $this->_movieDal->get($imdb_id);
+        if (isset($id)) {
+            $movie = $this->_movieDal->get($id);
             $this->printJsonResult($movie);
         }
     }
     
     private function printJsonResult($data)
     {
-        $json = json_encode($data, JSON_NUMERIC_CHECK | JSON_PRETTY_PRINT);
+        $json = json_encode($data, JSON_NUMERIC_CHECK | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
         // Set content
         header("Content-Type: application/json; charset=utf-8");
         echo $json;

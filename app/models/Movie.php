@@ -9,6 +9,7 @@ class Movie
     const RELEASED = "Released";
     const LANGUAGE = "Language";
     const RUNTIME = "Runtime";
+    const TRAILER = "Trailer";
     const PRODUCTION_COMPANY = "ProductionCompany";
     const DIRECTOR = "Director";
     const WRITER = "Writer";
@@ -24,11 +25,16 @@ class Movie
     public $released;
     public $language;
     public $runtime;
+    public $trailer;
     public $production_company;
     public $director;
     public $writer;
     public $actors;
     public $genres;
+    
+    public $backdrops;
+    public $logo;
+    public $poster;
     
     public function __construct(array $properties = null)
     {
@@ -48,6 +54,8 @@ class Movie
                 $this->language = $properties[self::LANGUAGE];
             if (isset($properties[self::RUNTIME]))
                 $this->runtime = $properties[self::RUNTIME];
+            if (isset($properties[self::TRAILER]))
+                $this->trailer = $properties[self::TRAILER];                
             if (isset($properties[self::PRODUCTION_COMPANY]))
                 $this->production_company = $properties[self::PRODUCTION_COMPANY];
             if (isset($properties[self::DIRECTOR]))
@@ -58,12 +66,39 @@ class Movie
                 $this->actors = $properties[self::ACTOR_LIST];
             if (isset($properties[self::GENRE_LIST]))
                 $this->genres = $properties[self::GENRE_LIST];
+            
+            if (isset($this->imdb_id)) {
+                $this->logo = "img/logos/$this->imdb_id.png";
+                $this->poster = "img/posters/$this->imdb_id.jpg";
+                $this->backdrops = $this->getBackdrops();
+            }
         }
     }
     
     public static function TableName()
     {
         return strtolower(get_class());
+    }
+    
+    private function getBackdrops()
+    {
+        $images = array();
+        $path = "img/backdrops/$this->imdb_id/";
+        if (is_dir($path)) {
+            $dir = new DirectoryIterator($path);
+            foreach ($dir as $item) {
+                if ($item->isFile()) {
+                    $imageInfo = getimagesize($item->getPathname());
+                    if ($imageInfo) {
+                        $mime = $imageInfo[2];
+                        if ($mime == IMAGETYPE_JPEG || $mime == IMAGETYPE_PNG) {
+                            $images[] = $path . $item->getFileName();
+                        }
+                    }
+                }
+            }
+        }
+        return $images;
     }
 }
 

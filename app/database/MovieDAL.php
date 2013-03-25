@@ -35,8 +35,8 @@ class MovieDAL
                 // Ugly hack, should be redesigned, database needs abstraction
                 $actorDal = new ActorDAL();
                 $genreDal = new GenreDAL();
-                $movie[Movie::ACTOR_LIST] = $actorDal->get($movieId);
-                $movie[Movie::GENRE_LIST] = $genreDal->get($movieId);
+                $movie[Movie::ACTOR_LIST] = $actorDal->get($movieId)->get();
+                $movie[Movie::GENRE_LIST] = $genreDal->get($movieId)->get();
                 $movies = new Movie($movie);
                 break;
             }
