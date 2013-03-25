@@ -23,8 +23,9 @@ class RpcController
     {
         if (($serviceName = $this->_view->getService()) != false) {
             if ($this->_view->getMethod() != false)
+            $serviceName .= 'Service';
             $service = new $serviceName();
-            $serviceName->handleRequest($this->_view->getMethod(), $this->_view->getParams());
+            $service->handleRequest($this->_view->getMethod(), $this->_view->getParams());
         }
     } 
 }

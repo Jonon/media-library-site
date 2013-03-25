@@ -18,7 +18,7 @@ class Database
     {
         try 
         {
-            $dbconfig = new DbConfig();
+            $this->_config = new DbConfig();
             $this->connect();
         }
         catch (Exception $exception)

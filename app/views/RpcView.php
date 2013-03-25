@@ -9,7 +9,7 @@ class RpcView
     public function getService()
     {
         if (isset($_POST[$this->_service]))
-            if (!empty($_POST[$this->_service])
+            if (!empty($_POST[$this->_service]))
                 return $_POST[$this->_service];
         return false;
     }
@@ -17,15 +17,17 @@ class RpcView
     public function getMethod()
     {
         if (isset($_POST[$this->_method]))
-            if (!empty($_POST[$this->_method])
+            if (!empty($_POST[$this->_method]))
                 return $_POST[$this->_method];
         return false;
     }
     
     public function getParams()
     {
-        if (isset($_POST[$this->_params]))
-            return $_POST[$this->_params];
-        return false;
+        if (isset($_POST[$this->_params])) {
+            if (is_array($_POST[$this->_params]))
+                return $_POST[$this->_params];
+        }
+        return array();
     }
 }

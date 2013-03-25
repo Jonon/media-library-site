@@ -19,7 +19,7 @@ class Movie
     
 	public $id;
     public $imdb_id;
-    public $tile;
+    public $title;
     public $plot;
     public $released;
     public $language;
@@ -34,24 +34,36 @@ class Movie
     {
         if (isset($properties))
         {
-            $this->id = $properties[self::MOVIE_ID];
-            $this->imdb_id = $properties[self::IMDB_ID];
-            $this->title = $properties[self::TITLE];
-            $this->plot = $properties[self::PLOT];
-            $this->released = $properties[self::RELEASED];
-            $this->language = $properties[self::LANGUAGE];
-            $this->runtime = $properties[self::RUNTIME];
-            $this->production_company = $properties[self::PRODUCTION_COMPANY];
-            $this->director = $properties[self::DIRECTOR];
-            $this->writer = $properties[self::WRITER];
-            $this->actors = $properties[self::ACTOR_LIST];
-            $this->genres = $properties[self::GENRE_LIST];
+            if (isset($properties[self::MOVIE_ID]))
+                $this->id = $properties[self::MOVIE_ID];
+            if (isset($properties[self::IMDB_ID]))
+                $this->imdb_id = $properties[self::IMDB_ID];
+            if (isset($properties[self::TITLE]))
+                $this->title = $properties[self::TITLE];
+            if (isset($properties[self::PLOT]))
+                $this->plot = $properties[self::PLOT];
+            if (isset($properties[self::RELEASED]))
+                $this->released = $properties[self::RELEASED];
+            if (isset($properties[self::LANGUAGE]))
+                $this->language = $properties[self::LANGUAGE];
+            if (isset($properties[self::RUNTIME]))
+                $this->runtime = $properties[self::RUNTIME];
+            if (isset($properties[self::PRODUCTION_COMPANY]))
+                $this->production_company = $properties[self::PRODUCTION_COMPANY];
+            if (isset($properties[self::DIRECTOR]))
+                $this->director = $properties[self::DIRECTOR];
+            if (isset($properties[self::WRITER]))
+                $this->writer = $properties[self::WRITER];
+            if (isset($properties[self::ACTOR_LIST]))
+                $this->actors = $properties[self::ACTOR_LIST];
+            if (isset($properties[self::GENRE_LIST]))
+                $this->genres = $properties[self::GENRE_LIST];
         }
     }
     
     public static function TableName()
     {
-        return strtolower(get_class($this));
+        return strtolower(get_class());
     }
 }
 

@@ -9,12 +9,12 @@ class GenreDAL
 {
     private $_db;
     
-    public function __construct(Database $database)
+    public function __construct()
     {
         $this->_db = Database::getInstance();
     }
 
-    public function Get($movieId)
+    public function get($movieId)
     {
         $sql = "SELECT g.GenreID, g.Genre FROM genre as g " . 
         "LEFT JOIN moviegenre as mg " .
@@ -25,10 +25,10 @@ class GenreDAL
         $stmt = $this->_db->Prepare($sql);
         $stmt->bindParam(":movieId", $movieId, PDO::PARAM_INT);
         $result = $this->_db->SelectQuery($stmt);
-        $genres = array();
+        $genres = new GenreList();
         foreach ($result as $genre)
         {
-            $genres[] = new Genre($genre);
+            $genres->add(new Genre($genre));
         }
         return $genres;
     }
