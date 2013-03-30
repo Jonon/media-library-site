@@ -64,6 +64,14 @@ h3 {
 	clear: both;
 }
 
+h4 {
+	font-family:"Helvetica", "sans-serif", "Arial";
+	font-size: 15px;
+	margin-top: 0px;
+	color: rgb(240,240,240);
+	clear: both;
+}
+
 
 /**
 
@@ -198,11 +206,11 @@ h3 {
 
 /**
 
- * 	Content
+ * 	Content home,contact and news
 
  */
 
-#content {
+#maincontent {
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 0px;
@@ -210,7 +218,55 @@ h3 {
 	text-align: center;
 }
 
+/**
 
+ * 	Content movies, series and games
+
+ */
+
+#content {
+	background: rgba(35,35,35,0.4);
+	margin-left: auto;
+	margin-right: auto;
+	width: 925px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	clear: both;
+	overflow: hidden;
+	
+}
+
+#content h1, h4 {
+	text-align: center;
+}
+
+#content .genrebox {
+	float:left;
+	padding-left:86px;
+	height: 25px;
+}
+
+#content .list {
+	margin-left: auto;
+	margin-right: auto;
+	float: left;
+	padding-top: 30px;
+}
+
+#content li {
+	width: 200px;
+	margin-left: 15px;
+}
+
+#content ul {
+	padding-left: 25px;
+	
+}
+
+#content img {
+	margin-left: 25px;
+	padding-top: 10px;
+}
 
 
 
@@ -288,25 +344,25 @@ h3 {
 }
 
 .backdrops img {
-background: rgb(0,0,0);
-border: 4px solid rgb(0,0,0);
-height: 50px;
-padding: 1px;
-margin: 0 10px 10px 0;
+	background: rgb(0,0,0);
+	border: 4px solid rgb(0,0,0);
+	height: 50px;
+	padding: 1px;
+	margin: 0 10px 10px 0;
 
 }
  
 .backdrops img:hover {
-border: 4px solid; 
-color:rgb(0,204,255);
-cursor:pointer;
+	border: 4px solid; 
+	color:rgb(0,204,255);
+	cursor:pointer;
 }
  
 .preview img {
-background: rgb(0,0,0);
-border: 4px solid rgb(0,0,0);
-padding: 1px;
-height: 250px;
+	background: rgb(0,0,0);
+	border: 4px solid rgb(0,0,0);
+	padding: 1px;
+	height: 250px;
 }
 
 .backdrops {
