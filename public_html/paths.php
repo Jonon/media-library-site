@@ -11,5 +11,9 @@ if (!defined("LIB_PATH"))
 {
 	define("LIB_PATH", realpath(dirname(__FILE__)) . "/../lib", false);
 }
+if (!defined("PUBLIC_PATH"))
+{
+    define("PUBLIC_PATH", realpath(dirname(__FILE__)), false);
+}
 
 set_include_path(get_include_path() . PATH_SEPARATOR . APP_PATH . PATH_SEPARATOR . LIB_PATH);

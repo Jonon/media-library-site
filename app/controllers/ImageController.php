@@ -19,7 +19,7 @@ class ImageController
     {
         try {
             if (isset($_GET['path']))
-                $path = $_GET['path'];
+                $path = PUBLIC_PATH . "/" . $_GET['path'];
             if (isset($_GET['height']))
                 $height = $_GET['height'];
             if (isset($_GET['width']))

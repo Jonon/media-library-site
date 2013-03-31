@@ -29,15 +29,15 @@ MediaLibrary.handleMovieListRequest = function() {
             var a = document.createElement("a");
             a.href = "movie.html?id=" + movie.id;
             var img = new Image();
-            img.src = "image.php?path=" + MediaLibrary.getHtmlDirname() + movie.poster + "&width=150&height=225";
+            img.src = "image.php?path=" + movie.poster + "&width=150&height=225";
             
             h4.appendChild(text);
             a.appendChild(img);
             li.appendChild(h4);
             li.appendChild(a);
             div.appendChild(li);
+            listContainer.appendChild(div);
         }
-        listContainer.appendChild(div);
     });
 }
 
@@ -58,7 +58,7 @@ MediaLibrary.fillMovieInfo = function(movie) {
     if (movie instanceof MediaLibrary.Movie) {
         // Left column
         var moviePoster = document.getElementById("movie-poster");
-        moviePoster.src = "image.php?path=" + MediaLibrary.getHtmlDirname() + movie.poster + "&width=214";
+        moviePoster.src = "image.php?path=" + movie.poster + "&width=214";
         var movieDirector = document.getElementById("movie-director");
         movieDirector.appendChild(document.createTextNode(movie.director));
         var movieWriter = document.getElementById("movie-writer");
@@ -98,7 +98,7 @@ MediaLibrary.fillMovieInfo = function(movie) {
         
         // Right column
         var movieLogo = document.getElementById("movie-logo");
-        movieLogo.src = "image.php?path=" + MediaLibrary.getHtmlDirname() + movie.logo + "&width=400&height=155";
+        movieLogo.src = "image.php?path=" + movie.logo + "&width=400&height=155";
         
         var moviePlot = document.getElementById("movie-plot");
         moviePlot.appendChild(document.createTextNode(movie.plot));
@@ -121,13 +121,13 @@ MediaLibrary.fillMovieInfo = function(movie) {
         for (var backdrop in movie.backdrops) {
             if (backdrop == 0) {
                 
-                previewImg.src = "image.php?path=" + MediaLibrary.getHtmlDirname() + movie.backdrops[backdrop] + "&width=450";
+                previewImg.src = "image.php?path=" + movie.backdrops[backdrop] + "&width=450";
                 previewImg.id = "preview";
                 previewImg.alt = "No image loaded";
                 movieMainBackdrop.appendChild(previewImg);
             }
             var img = new Image();
-            img.src = "image.php?path=" + MediaLibrary.getHtmlDirname() + movie.backdrops[backdrop] + "&width=450";
+            img.src = "image.php?path=" + movie.backdrops[backdrop] + "&width=450";
             img.id = "preview";
             img.alt = "No image loaded";
             img.onclick = changePreviewImage(movie.backdrops[backdrop]);
