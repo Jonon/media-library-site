@@ -242,7 +242,7 @@ h4 {
 
 #content .genrebox {
 	float:left;
-	padding-left:86px;
+	padding-left:20px;
 	height: 25px;
 }
 
@@ -256,16 +256,22 @@ h4 {
 #content li {
 	width: 200px;
 	margin-left: 15px;
+	padding: 10px;
+	border-radius: 3px;
 }
 
 #content ul {
-	padding-left: 25px;
+	padding-left: 102px;
 	
 }
 
 #content img {
 	margin-left: 25px;
 	padding-top: 10px;
+}
+
+#content li:hover {	
+	box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.9);	
 }
 
 
