@@ -20,7 +20,7 @@ class MovieDAL
     {
         $sql = null;
         if (is_null($movieId))
-            $sql = "SELECT " . Movie::MOVIE_ID . ", " . Movie::IMDB_ID . ", " . Movie::TITLE . " FROM " . Movie::TableName();
+            $sql = "SELECT " . Movie::MOVIE_ID . ", " . Movie::IMDB_ID . ", " . Movie::TITLE . " FROM " . Movie::TableName() . " ORDER BY " . Movie::TITLE;
         else
             $sql = "SELECT * FROM " . Movie::TableName() . " WHERE " . Movie::MOVIE_ID . "=:movieId";
         $stmt = $this->_db->Prepare($sql);
