@@ -15,7 +15,9 @@ MediaLibrary.handleMovieListRequest = function() {
     var request = new MediaLibrary.XhrRequest("service=Movie&method=getAllMovies", function(data) {
         var movies = MediaLibrary.Movie.importJsonArray(JSON.parse(data));
         movies.sort(function(a, b) {
-            return a.title.localeCompare(b.title);
+            var textA = a.title.toUpperCase();
+            var textB = b.title.toUpperCase();
+            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
         });
         for (var i = 0, j = movies.length; i < j; i++) {
             var movie = movies[i];
