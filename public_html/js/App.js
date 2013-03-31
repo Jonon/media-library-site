@@ -98,7 +98,7 @@ MediaLibrary.fillMovieInfo = function(movie) {
         
         // Right column
         var movieLogo = document.getElementById("movie-logo");
-        movieLogo.src = "image.php?path=" + movie.logo + "&width=400&height=155";
+        movieLogo.src = movie.logo;
         
         var moviePlot = document.getElementById("movie-plot");
         moviePlot.appendChild(document.createTextNode(movie.plot));
